@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Data - EASE IT</title>
+
+  <!-- Tailwind CSS & Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="healthdata.css">
+</head>
+<body class="p-10 bg-gradient-to-r from-green-200 to-blue-200">
+  <div class="max-w-3xl mx-auto bg-white bg-opacity-90 rounded-xl p-8 shadow-lg hover:shadow-xl transition">
+    
+    <!-- Title -->
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+      Health Conditions for <span id="displayUsername" class="text-green-600"></span>
+    </h2>
+
+    <form id="healthForm" class="space-y-6">
+      
+      <!-- Chronic Diseases -->
+      <div class="section">
+        <h3 class="section-title font-bold text-lg">Chronic Diseases</h3>
+        <div class="grid grid-cols-2 gap-2">
+          <label class="flex items-center gap-1"><input type="checkbox" name="ChronicDiseases_Diabetes" class="form-checkbox"> Diabetes</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="ChronicDiseases_Hypertension" class="form-checkbox"> Hypertension</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="ChronicDiseases_Asthma" class="form-checkbox"> Asthma</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="ChronicDiseases_HeartDisease" class="form-checkbox"> Heart Disease</label>
+        </div>
+      </div>
+
+      <!-- Infectious Diseases -->
+      <div class="section">
+        <h3 class="section-title font-bold text-lg">Infectious Diseases</h3>
+        <div class="grid grid-cols-2 gap-2">
+          <label class="flex items-center gap-1"><input type="checkbox" name="InfectiousDiseases_Tuberculosis" class="form-checkbox"> Tuberculosis</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="InfectiousDiseases_HepatitisB" class="form-checkbox"> Hepatitis B</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="InfectiousDiseases_HIV_AIDS" class="form-checkbox"> HIV/AIDS</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="InfectiousDiseases_Malaria" class="form-checkbox"> Malaria</label>
+        </div>
+      </div>
+
+      <!-- Neurological Disorders -->
+      <div class="section">
+        <h3 class="section-title font-bold text-lg">Neurological Disorders</h3>
+        <div class="grid grid-cols-2 gap-2">
+          <label class="flex items-center gap-1"><input type="checkbox" name="NeurologicalDisorders_Alzheimer" class="form-checkbox"> Alzheimer</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="NeurologicalDisorders_Parkinson" class="form-checkbox"> Parkinson</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="NeurologicalDisorders_Epilepsy" class="form-checkbox"> Epilepsy</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="NeurologicalDisorders_MultipleSclerosis" class="form-checkbox"> Multiple Sclerosis</label>
+        </div>
+      </div>
+
+      <!-- Allergies -->
+      <div class="section">
+        <h3 class="section-title font-bold text-lg">Allergies</h3>
+        <div class="grid grid-cols-2 gap-2">
+          <label class="flex items-center gap-1"><input type="checkbox" name="Allergies_Peanuts" class="form-checkbox"> Peanuts</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="Allergies_Dust" class="form-checkbox"> Dust</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="Allergies_Pollen" class="form-checkbox"> Pollen</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="Allergies_Shellfish" class="form-checkbox"> Shellfish</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="Allergies_Gluten" class="form-checkbox"> Gluten</label>
+          <label class="flex items-center gap-1"><input type="checkbox" name="Allergies_Lactose" class="form-checkbox"> Lactose</label>
+        </div>
+      </div>
+
+      <!-- Submit & Reset Buttons -->
+      <div class="mt-6 flex space-x-4 justify-center">
+        <button type="submit" class="btn-submit flex items-center space-x-2 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition">
+          <i class="fas fa-paper-plane"></i> <span>Submit</span>
+        </button>
+        <button type="reset" class="btn-reset flex items-center space-x-2 bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition">
+          <i class="fas fa-redo"></i> <span>Reset</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
